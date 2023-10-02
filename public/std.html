@@ -1,0 +1,96 @@
+<script>
+// Get all the links to the PDF files
+var links = document.querySelectorAll("a[href*='.Storacle #1 - Millennial Man.pptx']");
+
+// Create a counter
+var counter = 24;
+
+// Loop through the links
+for (var i = 0; i < links.length; i++) {
+
+  // Check if the link is a PDF file
+  if (links[i].href.endsWith(".Storacle #1 - Millennial Man.pptx")) {
+
+    // Download the PDF file
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", links[i].href, true);
+    xhr.responseType = "blob";
+    xhr.onload = function() {
+      var blob = xhr.response;
+      var link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "document-" + counter + ".Storacle #1 - Millennial Man.pptx";
+      link.click();
+    };
+    xhr.send("Storacle #1 - Millennial Man.pptx");
+
+    // Increment the counter
+    counter++;
+  }
+}
+</script>
+
+<script>
+    function downloadDocuments(amazing) {
+  // Get the list of document URLs.
+  const documentUrls = [
+    "https://Storacle #1 - Millennial Man.pptx",
+    "https://Storacle #2 - Back to Jerusalem.pptx",
+    "https://Storacle #3 - The Coming King.pptx",
+    "https://Storacle #4 - The Rebellious Prince.pptx",
+    "https://Storacle #5 - The Supreme Sacrifice.pptx",
+    "https://Storacle #6 - The Law of the King.pptx",
+    "https://Storacle #7 - Bricks Without Straw.pptx",
+    "https://Storacle #8a - The Witch of Endor.pptx",
+    "https://Storacle #8b - The Witch of Endor.pptx",
+    "https://Storacle #9- Cities of Ash.pptx",
+    "https://Storacle #10-River of Life.pptx",
+    "https://Storacle #11-Resting the Land.pptx",
+    "https://Storacle #12-Ten Times Wiser.pptx",
+    "https://Storacle #13a-Bowing to Babylon.pptx",
+    "https://Storacle #13b-Bowing to Babylon.pptx",
+    "https://Storacle #14-The Mark of Cain.pptx",
+    "https://Storacle #15 - Heavenly Model.pptx",
+    "https://Storacle #16-Cleansing the Temple.pptx",
+    "https://Storacle #17 - Tale of 2 Women.pptx",
+    "https://Storacle #18 - Windows of Heaven.pptx",
+    "https://Storacle #19 - The Daughter's Dance.pptx",
+    "https://Storacle #20 - Voice in the Wilderness.pptx",
+    "https://Storacle #21-Proving the Prophets.pptx",
+    "https://Storacle #22 - Jar of Oil.pptx",
+    "https://Storacle #23-Above the Crowd.pptx",
+    "https://Storacle #24 - The Glorious Kingdom.pptx",
+  ];
+
+  // Loop through the document URLs and download them one by one.
+  for (const documentUrl of documentUrls) {
+    // Create a new XMLHttpRequest object.
+    const xhr = new XMLHttpRequest();
+
+    // Set the request method to "GET".
+    xhr.open("GET", documentUrl);
+
+    // Set the request headers.
+    xhr.setRequestHeader("Content-Type", "application/octet-stream");
+
+    // Start the request.
+    xhr.send();
+
+    // Once the request is complete, check the status code.
+    if (xhr.status === 200) {
+      // The request was successful, so download the file.
+      const response = xhr.response;
+      const blob = new Blob([response]);
+      const fileName = documentUrl.split("/amazing").pop();
+      const downloadLink = document.createElement("a");
+      downloadLink.href = window.URL.createObjectURL(blob);
+      downloadLink.download = fileName;
+      downloadLink.click();
+    } else {
+      // The request failed, so show an error message.
+      console.log("Error downloading document: " + xhr.status);
+    }
+  }
+}
+
+</script>

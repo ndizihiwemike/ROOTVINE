@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form{
+            text-align: center;
+            size-adjust: inherit;
+
+        }
+        .R{
+            text-align: center;
+            font-weight: 600;
+            border-radius: 50px;
+            background-color: rgba(255, 166, 0, 0.027);
+            margin: 10px;
+            padding: 10px;
+            background-clip: padding-box;
+            border-radius: 30%;
+
+        }
+        .h1{
+            color: darkcyan;
+        }
+        strong{
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <strong>NACOTHA</strong>
+    <h1><b>WELCOME</b>TO <br> ROOT AND VINE <br>LIFESTYE CENTRE </h1>
+           <div class="parent">
+        <form action="/sendData" method="post" id="userForm">
+            <label for="Name">Your Name</label>
+            <input type="text" placeholder="Name" name="Name" required>
+            <label id="response" for="Email">Youq Email</label>
+            <input type="email" placeholder="Email" name="Email" required>
+            <label for="Location">Your Location</label>
+            <input type="text" placeholder="Location" name="Location" required>
+            <label for="Subject">Topic of your inquiry or message</label>
+            <input type="text" placeholder="Subject" name="Subject" required>
+            <label for="Message">Explain in detail</label>
+            <textarea placeholder="Your message" name="Message" rows="5" required></textarea>
+            <button onclick="SubmitData()">Send Info to Doctor</button>
+        </form>
+
+    </div>
+    
+     <h1 class="h">CONTACT INFO & DETAILS</h1>
+     <P class="R">We would love to hear from you. <br> Please send us a massage using the
+         <br> contact information at the bottom of <br>
+    the page  or use the form on the right <br> to send us an email directly. </P>
+
+    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0"
+        scrolling="no" marginheight="0" marginwidth="0"
+     src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=kawanda-wattuba uganda&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://capcuttemplate.org/">Capcut Templates</a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe 
+    {width:100%!important;height:200px!important;margin-top: 10px !important;}</style></div>
+    
+    <p class="R">Open <mark>24 Hours</mark></p>
+    <p class="R"><ion-icon name="call-outline"></ion-icon>(+256)705601757 | (+256)789203292</p> 
+    <h2 class="h">APOINTMENT REQUEST</h2>
+    <p class="R">If you wish to book an appointment <br> with the doctor,<br>
+         you can contact on <mark><ion-icon name="logo-whatsapp"></ion-icon>0705601757</mark>directly</p> 
+
+         <p style="color: brown; position: absolute; font-weight: 700; font-size: 30px"> <marquee>&copy; Babieezra333@gmail.com</marquee></p>
+</body>
+</html>
