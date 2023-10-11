@@ -59,14 +59,15 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 20px;
     /*this block is for styling the list element*/
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 5px;
+    font-size: 10px;
     color: rgb(15, 15, 15);
     font-family: 'Times New Roman', Times, serif Impact,  'Arial Narrow Bold', sans-serif;
+    padding-top: 10px;
 }
 nav ul li button{
     font-size: 30px;
