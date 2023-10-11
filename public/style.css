@@ -16,11 +16,11 @@
 .navbar{
     display: flex;
     align-items: center;
-    padding: 70px;
-    padding-left: 30px;
+    padding: 50px;
+    padding-left: 10px;
     padding-right: 30px;
    /* padding-top: 10px; */
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     /* this if for setting the dimensions of the navigaion bar*/
 }
 h1{
@@ -32,8 +32,8 @@ h2{
     color: blue;
 }
 .p{
-    padding: 20px;
-    font-size: 20px;
+    padding: 50px;
+    font-size: 25px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
@@ -52,6 +52,7 @@ h2{
 nav{
     flex: 1;
     text-align: right;
+    glyph-orientation-horizontal: 20deg;
 }
 nav ul{
     display: inline-block;
@@ -64,7 +65,7 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(15, 15, 15);
     font-family: 'Times New Roman', Times, serif Impact,  'Arial Narrow Bold', sans-serif;
 }
