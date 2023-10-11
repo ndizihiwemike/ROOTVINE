@@ -52,7 +52,6 @@ h2{
 nav{
     flex: 1;
     text-align: right;
-    glyph-orientation-horizontal: 20deg;
 }
 nav ul{
     display: inline-block;
@@ -60,12 +59,12 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    margin-right: 60px;
+    margin-right: 40px;
     /*this block is for styling the list element*/
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 5px;
     color: rgb(15, 15, 15);
     font-family: 'Times New Roman', Times, serif Impact,  'Arial Narrow Bold', sans-serif;
 }
