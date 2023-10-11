@@ -56,7 +56,6 @@ nav{
 nav ul{
     display: inline-block;
     list-style: none;
-    padding-top: 10px;
 }
 nav ul li{
     display: inline-block;
@@ -65,10 +64,9 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     color: rgb(15, 15, 15);
     font-family: 'Times New Roman', Times, serif Impact,  'Arial Narrow Bold', sans-serif;
-    padding-top: 10px;
 }
 nav ul li button{
     font-size: 30px;
