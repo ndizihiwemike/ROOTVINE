@@ -66,6 +66,16 @@ nav ul li{
     
     /*this block is for styling the list element*/
 }
+.floating-image {
+    perspective: 1000px; /* adds depth to the image */
+    transform-style: preserve-3d; /* allows 3D transformations */
+    transition: transform 0.5s; /* smooth transition effect */
+  }
+  
+.floating-image:hover {
+    transform: translateZ(20px) scale(1.1); /* moves the image 20px forward and scales it up */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* adds a subtle shadow */
+}
 nav ul li a{
     text-decoration: none;
     font-size: 12px;
