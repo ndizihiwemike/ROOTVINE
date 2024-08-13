@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases & Conditions - Root & Vine Lifestyle Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+      header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+    
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: aqua;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+h2{
+  text-align: center;
+  font-size: 35px;
+}
+h3{
+  text-align: center;
+  font-size: 33px;
+}
+p{
+  text-align: center;
+  font-size: 30px;
+}
+img{
+  padding: 20px;
+  margin: 0 auto;
+  height: 400px;
+  display: block;
+  border-radius: 15vh;
+  transform: all 100ms ease-in-out;
+}
+img:hover{
+  transform: rotate(50deg);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul style="font-size: 30px;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="diseases-intro">
+            <h1>Diseases & Conditions</h1>
+            <p>Learn more about the diseases and conditions we specialize in, and discover our natural healthcare solutions.</p>
+        </section>
+        <section class="diseases-list">
+            <ul>
+                <li>
+                    <img src="IMG-20230301-WA0025.jpg" alt="">
+                    <h3><a href="anxiety.html">kidney failure</a></h3>
+                </li>
+                <li>
+                    <img src="Athiritis.jpg" alt="Arthritis">
+                    <h3><a href="arthritis.html">Arthritis</a></h3>
+                </li>
+                <li>
+                    <img src="diabetes.webp" alt="Diabetes">
+                    <h3><a href="diabetes.html">Diabetes</a></h3>
+                </li>
+                <!-- Add more diseases/conditions -->
+            </ul>
+        </section>
+    </main>
+    <script>
+      
+      // Disease/Condition script.js code
+
+// Get the disease/condition tabs element
+const diseaseTabs = document.getElementById('disease-tabs');
+
+// Initialize the disease/condition tabs
+const diseaseTabsOptions = {
+  tabs: true,
+  hash: true
+};
+$(diseaseTabs).tabs(diseaseTabsOptions);
+
+// Get the disease/condition accordion element
+const diseaseAccordion = document.getElementById('disease-accordion');
+
+// Initialize the disease/condition accordion
+const diseaseAccordionOptions = {
+  collapsible: true,
+  active: false
+};
+$(diseaseAccordion).accordion(diseaseAccordionOptions);
+
+// Get the symptoms checklist element
+const symptomsChecklist = document.getElementById('symptoms-checklist');
+
+// Initialize the symptoms checklist
+const symptomsChecklistOptions = {
+  checkboxes: true
+};
+$(symptomsChecklist).checkboxes(symptomsChecklistOptions);
+
+// Add event listener to the "Get Started" button
+const getStartedButton = document.getElementById('get-started-button');
+getStartedButton.addEventListener('click', handleGetStarted);
+
+// Function to handle "Get Started" button click
+function handleGetStarted() {
+  const selectedSymptoms = [];
+  const symptomCheckboxes = symptomsChecklist.querySelectorAll('input[type="checkbox"]:checked');
+
+  symptomCheckboxes.forEach(checkbox => {
+    selectedSymptoms.push(checkbox.value);
+  });
+
+  // Send the selected symptoms to the server
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'disease-condition.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.send(`symptoms=${selectedSymptoms.join(',')}`);
+
+  // Handle the server response
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      const recommendedProducts = response.recommendedProducts;
+
+      // Display the recommended products
+      const recommendedProductsHtml = '';
+      recommendedProducts.forEach(product => {
+        recommendedProductsHtml += `
+          <div class="recommended-product">
+            <img src="product-images/${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+          </div>
+        `;
+      });
+      const recommendedProductsContainer = document.getElementById('recommended-products');
+      recommendedProductsContainer.innerHTML = recommendedProductsHtml;
+    } else {
+      alert('Error processing symptoms. Please try again later.');
+    }
+  };
+}
+    </script>
+    <script>
+      // Add event listeners to disease/condition links
+const diseaseLinks = document.querySelectorAll('.diseases-list a');
+
+diseaseLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const diseaseName = link.textContent.trim();
+        // Load disease/condition page dynamically
+        loadDiseasePage(diseaseName);
+    });
+});
+
+// Function to load disease/condition page dynamically
+function loadDiseasePage(diseaseName) {
+    const diseasePageUrl = `/${diseaseName}.html`;
+    window.location.href = diseasePageUrl;
+}
+    </script>
+</body>
+</html>

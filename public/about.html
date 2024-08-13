@@ -2,63 +2,219 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Us - Root & Vine Lifestyle Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <style>
-        .m{
-            border-radius: 40%;
-            margin: 10px;
-            text-align: center;
-            text-indent: 20px;
-            font-weight: 600;
-            font-size: 20px;
-            box-shadow: 30px;
-            background-color: grey; /* Set your desired background color */
-            padding: 20px; /* Add some padding around the text */
-            border-radius: 45px;
-            background-size: 20px;
-        }
-        *{
-            background-color: grey;
-        }
-        .viw{ 
-       /* background-image: url("IMG-20201128-WA0418.jpg")*/
-    }
-    /* style.css */
-.paragraph-with-background {
-  background-color: lightblue; /* Set your desired background color */
-  padding: 20px; /* Add some padding around the text */
-  border-radius: 45px; /* Optionally add rounded corners */
+      header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+    
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: aqua;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+h2{
+  text-align: center;
+  font-size: 35px;
+}
+h3{
+  text-align: center;
+  font-size: 33px;
+}
+
+p{
+  text-align: center;
+  font-size: 30px;
+}
+img{
+  margin: 0 auto;
+  display: block;
+}
     </style>
 </head>
-<body class="viw" >
-    <h1>WELCOME TO <BR> ROOT AND VINE <br> LIFE STYLE CENTRE</h1> <br />
-    <p class="m">Root & vine was founded by Dr NDIZIHIWE BARBRA who studied from india, <br>
-    for 7 years to attain her profession in both medicine and surgery and use of herbal medicine <br>
-she found out that herbal medicine works better for the body's proper healing than using <br>
-drugs that have rather cause harm to our bodies from experience.</p>
+<body>
 
+  <header>
+    <nav>
+        <ul style="font-size: 30px;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">products</a></li>
+            <li><a href="disease.html">Diseases & Conditions</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+  </header>
+    <main>
+        <section class="about-intro">
+            <h1>About Us</h1>
+            <p>Welcome to Root & Vine Lifestyle Centre, where we believe in harnessing the power of natural herbs to promote healthy living.</p>
+        </section>
+        <section class="mission-vision-values">
+            <h2>Our Mission, Vision, and Values</h2>
+            <p><strong>Mission:</strong><br> To provide high-quality,<br> natural healthcare solutions that empower individuals <br> to take control of their health  and wellbeing.</p>
+            <p><strong>Vision:</strong><br> To be a leading provider of natural <br> healthcare solutions, recognized for our commitment <br> to excellence, innovation, and patient care.</p>
+            <p><strong>Values:</strong><br> We value integrity, compassion, and respect for <br> all individuals. We believe in the power of nature and the <br> importance of living a healthy, balanced lifestyle.</p>
+        </section>
+        <section class="meet-the-team">
+            <h2>Meet Our Team</h2>
+            <ul>
+                <li id="team-members">
+                    <img src="BABRA.png" alt="Dr. BABRA">
+                    <h3>Dr. NDIZIHIWE BABRA</h3>
+                    <p>Medical Director</p>
+                    <p>Dr. BABRA is a qualified doctor with <br> over 10 years of experience in natural healthcare. <br> She is passionate about helping patients <br> achieve optimal health and wellbeing.</p>
+                </li>
+                <li>
+                    <img src="dr-jones.jpg" alt="Dr. KENNETH">
+                    <h3>NURSE. BWAMBALE KENNETH</h3>
+                    <p>PYSIOTHERAPY EXPERT</p>
+                    <p>Nurse Kenneth is a qualified PYSIOTHERAPY EXPERT with <br> a specialization in herbal medicine. <br> he is dedicated to providing personalized <br> care to his patients.</p>
+                </li>
+                <!-- Add more team members -->
+            </ul>
+        </section>
+        <section class="testimonials" id="testimonials">
+            <h2>What Our Patients Say</h2>
+            <ul>
+                <li>
+                    <p>"I was struggling with chronic pain for years, <br> but after trying Root & Vine's natural remedies, <br> I'm finally pain-free!" - Rachel, age 35</p>
+                </li>
+                <li>
+                    <p>"The team at Root & Vine are so knowledgeable and caring. <br> They helped me overcome my health issues <br> and I feel like a new person!" - John, age 42</p>
+                </li>
+                <!-- Add more testimonials -->
+            </ul>
+        </section>
+    </main>
+    <script>
+        // About Us script.js code
 
-         <p class="m"><a> we also offer many services </a> <br>
-          <b>we teach people who are interasted in healing humanity <br>
-            we allow consultation about any disease,<br> diety is key, <br> we have all natural products that work well on body rejuvenation</b> </p>
+// Get the team members element
+const teamMembers = document.getElementById('team-members');
 
-           <p class="m"><a>OUR AIM</a><br><b> To up root the cause</b></p>
+// Initialize the team members carousel
+const teamMembersOptions = {
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: true,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+};
+$(teamMembers).slick(teamMembersOptions);
 
-           <p class="m"><a>OUR MISSION</a><br><b> To transform the way patients access <br>
-                healthcare services around the world,
-               <br> starting in Uganda-Whole world.</b></p>
+// Get the testimonials element
+const testimonials = document.getElementById('testimonials');
 
-               <p class="m"><a>OUR VISION</a><br><b> To create a unique seamless patient <br>
-                    journey where patients can get the <br>
-               healthcare services they need quickly, <br> no matter there health concern </b></p>
+// Initialize the testimonials carousel
+const testimonialsOptions = {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  dots: true
+};
+$(testimonials).slick(testimonialsOptions);
 
-               <p class="m"><a>OUR CORE VALUES</a><br><b> We are patient centric <br> We celebrate differences <br>
-                    We are relentless & think big </b></p>
+// Add event listener to the "Read More" buttons
+const readMoreButtons = document.querySelectorAll('.read-more-button');
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', handleReadMore);
+});
 
+// Function to handle "Read More" button click
+function handleReadMore(event) {
+  const button = event.target;
+  const teamMemberBio = button.nextElementSibling;
+
+  // Toggle the team member bio
+  teamMemberBio.classList.toggle('active');
+  button.textContent = teamMemberBio.classList.contains('active') ? 'Read Less' : 'Read More';
+}
+
+// Get the newsletter signup form element
+const newsletterForm = document.getElementById('newsletter-form');
+
+// Add event listener to the newsletter signup form
+newsletterForm.addEventListener('submit', handleNewsletterSubmit);
+
+// Function to handle newsletter submission
+function handleNewsletterSubmit(event) {
+  event.preventDefault();
+
+  const emailInput = document.getElementById('newsletter-email');
+  const email = emailInput.value;
+
+  // Validate the email address
+  if (!email || !validateEmail(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+
+  // Send the email address to the server
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'newsletter.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.send(`email=${email}`);
+
+  // Handle the server response
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      alert('Thank you for subscribing to our newsletter!');
+      newsletterForm.reset(); // Reset the form
+    } else {
+      alert('Error subscribing to newsletter. Please try again later.');
+    }
+  };
+}
+
+// Function to validate an email address
+function validateEmail(email) {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+}
+    </script>
 </body>
 </html>
