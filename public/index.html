@@ -85,6 +85,9 @@ p{
   font-size: 30px;
  
 }
+/* @media (min-width: 600px){
+    display: flex: ;;
+} */
 
 img{
   margin: 0 auto;
@@ -149,14 +152,14 @@ img{
             <button class="cta-btn">Book Now</button>
         </section>
     </main>
-    <a href="" class="scroll-top" id="btnscroll">Back to top</a>
+    <a href="" class="scroll-top" id="btnscroll" style="display: flexbox; left: 0; background-color: blue; color: #0afa2a; font-size: 30px;">Back to top</a>
     <script>
 
       document.getElementById('btnscroll').addEventListener('click', function(){
 
         window.scrollTo({
           top: 0,
-          right: 0 ,
+          right: 0,
           // behavior: 
         });
       });
