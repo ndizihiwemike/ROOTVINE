@@ -4,61 +4,6 @@ body {
     padding: 0;
 }
 
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Small screens (Android phone) */
-  @media only screen and (max-width: 480px) {
-    body {
-      font-size: 14px;
-    }
-    .header {
-      height: 50px;
-    }
-    .nav {
-      display: none;
-    }
-    .main-content {
-      padding: 10px;
-    }
-  }
-  
-  /* Medium screens (tablet) */
-  @media only screen and (max-width: 768px) {
-    body {
-      font-size: 16px;
-    }
-    .header {
-      height: 70px;
-    }
-    .nav {
-      display: block;
-    }
-    .main-content {
-      padding: 20px;
-    }
-  }
-  
-  /* Large screens (desktop) */
-  @media only screen and (min-width: 1024px) {
-    body {
-      font-size: 18px;
-    }
-    .header {
-      height: 100px;
-    }
-    .nav {
-      display: block;
-    }
-    .main-content {
-      padding: 30px;
-    }
-  }
-
 header {
     background-color: #f0f0f0;
     padding: 20px;
@@ -387,16 +332,16 @@ label {
     justify-content: space-between;
     border: 1px solid #333;
     border-radius: 5px;
-    height: 300px;
-    width: 250px;
+    height: 160px;
+    /* width: 250px; */
 }
 
 h2{
-    font-size: 20px;
+    font-size: 15px;
     color: orangered;
 }
 p{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .img-box{
