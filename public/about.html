@@ -57,6 +57,64 @@ img{
   margin: 0 auto;
   display: block;
 }
+.mission-vision-values {
+  width: 400px;
+  height: 700px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.mission-vision-values h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: slideIn 1s;
+}
+
+.mission-vision-values p {
+  font-size: 25px;
+  margin-bottom: 10px;
+  animation: slideIn 1s;
+}
+
+.mission-vision-values p:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.mission-vision-values p:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.mission-vision-values p:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+.mission-vision-values p:nth-child(6) {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
     </style>
 </head>
