@@ -32,7 +32,7 @@ nav ul li a:hover{
 }
 
 .hero {
-    background-image: url('hero.jpg');
+    background-image: url('IMG-20201128-WA0418.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -64,7 +64,7 @@ nav ul li a:hover{
 }
 
 .cta-btn:hover {
-    background-color: #3e8e41;
+    background-color: #f3f7f3;
 }
 
 .intro {
@@ -95,7 +95,7 @@ nav ul li a:hover{
 /* about us */
 
 .about-intro {
-    background-image: url('about-hero.jpg');
+    background-image: url('IMG-20201128-WA0418.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -182,7 +182,7 @@ input, textarea:focus{
 }
 
 .contact-intro {
-    background-image: url('contact-hero.jpg');
+    background-image: url('IMG-20201128-WA0418.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
