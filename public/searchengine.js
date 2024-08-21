@@ -1634,7 +1634,7 @@ const displaycart = ()=>{
      cart.forEach((item)=> 
         {
             var {Image, title, price} = item;
-            // console.log('kita:');
+           
             console.log(Image+": " +title, price);
             total=total+price;
             console.log("total: "+total)
