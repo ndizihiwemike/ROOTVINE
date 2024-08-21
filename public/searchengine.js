@@ -13,13 +13,13 @@ const product=[
     },
     {
         id: 2,
-        Image: '',
+        Image: 'AMERICAN BAG.jpg',
         title: 'Adivasi 70m/s',
         price: 36000 
     },
     {
         id: 3,
-        Image: '',
+        Image: 'BRITISH BAG.jpg',
         title: 'Adivasi 150m/s',
         price: 51000
     },
