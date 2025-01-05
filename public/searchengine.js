@@ -1,25 +1,25 @@
 const product=[
     {
         id: 0,
-        Image:'Capsules filling plate.jpg',
+        Image:'',
         title: 'Capscule plate',
         price: 550000 
     },
     {
         id: 1,
-        Image: 'Empty capscules.jpg',
+        Image: '',
         title: 'Capscules',
         price: 100000
     },
     {
         id: 2,
-        Image: 'AMERICAN BAG.jpg',
+        Image: '',
         title: 'Adivasi 70m/s',
         price: 36000 
     },
     {
         id: 3,
-        Image: 'BRITISH BAG.jpg',
+        Image: '',
         title: 'Adivasi 150m/s',
         price: 51000
     },
