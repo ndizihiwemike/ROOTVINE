@@ -1,7 +1,7 @@
 const product=[
     {
         id: 0,
-        Image:'',
+        Image:'PHOTO/AMATOVU.png',
         title: 'Capscule plate',
         price: 550000 
     },
@@ -1399,7 +1399,7 @@ const product=[
     },
     {
         id: 233,
-        Image: '',
+        Image: 'ROOTVINE/public/PHOTO/ADIVASI BLOOD BANK.jpg',
         title: 'Adivasi Blood Bank',
         price: 30000
     },
