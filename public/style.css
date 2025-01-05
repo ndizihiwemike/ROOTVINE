@@ -330,7 +330,7 @@ label {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #333;
+    border: 4px solid #333;
     border-radius: 5px;
     height: 350px;
     width: 340px;
