@@ -22,7 +22,7 @@ option{
     </style>
 <script src="https://kit.fontawesome.com/b8c51a70ab.js" crossorigin="anonymous"></script>
 </head>
-<body style="background-color: aquamarine;">
+<body>
 
     <header>
         <nav>
@@ -35,16 +35,121 @@ option{
         </nav>
     </header>
 <div class="searchbar">
-    <input type="text" placeholder="search..." id="searchBar" name="searchBar" style="width: 200px; height: 40px; font-size: 30px; border-radius: 2vh; flex: 1; margin: 5px; left: 20px;">
+    <input type="text" placeholder="search..." id="searchBar" name="searchBar" style="width: 200px; margin: 5px; height: 40px; font-size: 30px; border-radius: 2vh; flex: 1; margin: 5px; left: 20px;">
     <div class="cart"><a href="Cartitem.html"><i class="fa-solid fa-cart-shopping"></i><p id="count" style="height: 20px;;">0</p></a></div>
 </div>
-    <div id="root"></div>
+<div class="container">
+ <div id="root"></div>
+  <div class="sidebar">
+     <div class="head"><p>my cart</p></div>
+     <div>
 
-    <script src="searchengine.js"></script>
+         <form action="/submit-form" method="post" id="userForm" class="formS">
+             <label for="Name">Your Name</label>
+             <input id="Name" type="text" placeholder="Name" name="Name" required><br>
+             
+             <label for="Email">Your E-mail</label>
+             <input id="Email" type="email" placeholder="E-mail" name="email" required><br>
+             
+             <label for="Phone">Your phone number</label>
+             <input id="Phone" type="tel" placeholder="Phone" name="Phone" required><br>
+             
+             <label for="Location">Your location</label>
+             <input id="Location" type="text" placeholder="Location" name="Location" required><br>
+             
+             <div id="cartItem" class="list">Your cart is empty</div>
+           
+             <div class="foot">
+               <h3>Total</h3>
+               <h2 id="total">$ 0</h2>
+             </div>
+             
+             <button type="submit">Submit</button>
+           </form>
+     </div>
+     
+     
+ </div>
+ 
+<script src="searchengine.js"></script>
+
+
+<script>
+
+const userForm = document.getElementById("userForm");
+
+userForm.addEventListener("submit", async (e) => {
+e.preventDefault(); // Prevent form submission
+
+// Get form input values
+const name = document.getElementById("Name").value;
+const email = document.getElementById("Email").value;
+const phone = document.getElementById("Phone").value;
+const location = document.getElementById("Location").value;
+const cartItems = []; // Initialize an empty array to store cart items
+
+// Get cart items from the #cartItem div
+const cartItemElements = document.getElementById("cartItem").children;
+for (const element of cartItemElements) {
+ if (element.tagName === "DIV" && element.classList.contains("cart-item")) {
+   const cartItem = {
+     image: element.querySelector("img").src,
+     title: element.querySelector("p").textContent,
+     price: element.querySelector("h2").textContent 
+   };
+ console.log("Title:", cartItem.title);
+ console.log("Price:", cartItem.price);
+ console.log("Image URL:", cartItem.image);
+   cartItems.push(cartItem);
+ }
+}
+console.log(cartItems)
+
+const totalPriceString = cartItems.reduce((acc, item) => {
+// totalPrice.toFixed(2);
+return acc + parseFloat(item.price);
+}, 0);
+
+
+const cartItemsString = cartItems.map((item, index) => {
+JSON.stringify(cartItems, null, 2);
+return `${index + 1}. ${item.title} - ${item.price}`;
+}).join("\n");
+
+try {
+const response = await fetch("/submit-form", {
+ method: "POST",
+ headers: {
+   "Content-Type": "application/json"
+ },
+ body: JSON.stringify({
+   name: name,
+   email: email,
+   phone: phone,
+   location: location,
+   cartItems: cartItems,
+   total: total
+ })
+});
+
+if (response.ok) {
+ console.log("Form data submitted successfully!");
+ // You can display a success message to the user here
+} else {
+ console.log("Error submitting form data:", response);
+ alert("Error submitting form data.");
+ // You can display an error message to the user here
+}
+} catch (error) {
+console.log("An error occurred:", error);
+alert("An error occurred:");
+// You can display an error message to the user here
+}
+
+});
+
    
     <a href="" class="scroll-top" id="btnscroll" style="display: flexbox; left: 0; background-color: blue; color: #0afa2a; font-size: 30px;">Back to top</a>
-   
-
-  
+</script>
 </body>
 </html>

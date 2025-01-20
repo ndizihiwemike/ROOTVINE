@@ -155,7 +155,7 @@ nav ul li a:hover{
 
 /* contact use  */
 
-form{
+/* form{
     width: 80%;
     padding: 20px;
     box-sizing: border-box;
@@ -166,7 +166,7 @@ form button{
     background: darkcyan;
     padding: 10px 20px;
     border-radius: 5px;
-}
+} */
 input{
     width: 100%;
     padding: 5px;
@@ -308,6 +308,18 @@ label {
 
   /* products */
 
+  .searchbar{
+    width: 100%;
+    right: 10px;
+    font-size: 20px;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .top{
     height: 60px;
     border-radius: 3px;
@@ -433,14 +445,14 @@ button:hover{
 
 /* .cart-item */
 .sidebar{
-    width: 140px;
+    width: 40%;
     border: solid #eee;
     border-radius: 3px;
+    margin-left: 10px;
     text-align: center;
-    left: 30px;
-    padding: 8vh;
-    height: 80vh;
-    box-shadow: 0px 5px 5px grey;
+    padding: 4vh;
+    height: 200vh;
+    box-shadow: 0px 0px 5px grey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -470,3 +482,18 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
+.formS{
+    font-size: 50px;
+    margin: 5px;
+ }
+ .formS label{
+    font-size: 20px;
+ }
+ .formS input{
+    font-size: 30px;
+    border: 2px solid gray;
+ }
+ .list{
+    font-size: 30px;
+    margin: 5px;
+ }
