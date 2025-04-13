@@ -1401,7 +1401,7 @@ const product=[
         id: 233,
         Image: 'ROOTVINE/public/PHOTO/ADIVASI BLOOD BANK.jpg',
         title: 'Adivasi Blood Bank',
-        price: 30000
+        price: 3000
     },
     {
         id: 234,
