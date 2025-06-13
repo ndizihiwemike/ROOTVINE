@@ -1,7 +1,7 @@
 const product=[
     {
         id: 0,
-        Image:'PHOTO/AMATOVU.png',
+        Image:'',
         title: 'Capscule plate',
         price: 550000 
     },
