@@ -4,278 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Root & Vine Lifestyle Centre</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Slick Carousel -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <style>
-      header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-nav li {
-    margin-right: 20px;
-    
-}
-
-nav a {
-    color: #333;
-    text-decoration: none;
-}
-nav ul li a:hover{
-    color: aqua;
-}
-h1{
-  text-align: center;
-  font-size: 35px;
-}
-h2{
-  text-align: center;
-  font-size: 30px;
-}
-h3{
-  text-align: center;
-  font-size: 25px;
-}
-
-p{
-  text-align: center;
-  font-size: 25px;
-}
-img{
-  margin: 0 auto;
-  display: block;
-}
-.mission-vision-values {
-  width: 500px;
-  height: 700px;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s;
-  margin: 40px auto;
-  text-align: center;
-  animation-delay: 5s;
-}
-
-.mission-vision-values h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  animation: slideIn 1s;
-  animation-delay: 5s;
-}
-
-.mission-vision-values p {
-  font-size: 20px;
-  margin-bottom: 10px;
-  animation: slideIn 1s;
-  animation-delay: 5s;
-}
-
-.mission-vision-values p:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.mission-vision-values p:nth-child(3) {
-  animation-delay: 4s;
-}
-
-.mission-vision-values p:nth-child(5) {
-  animation-delay: 5s;
-}
-
-.mission-vision-values p:nth-child(6) {
-  animation-delay: 6s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
+        body {
+            background-color: #e8f5e9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #2e7d32 !important;
+        }
+        
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        
+        .nav-link:hover {
+            color: #a5d6a7 !important;
+        }
+        
+        .about-intro {
+            padding: 60px 0;
+            background-color: #81c784;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .mission-vision-values {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-top: 5px solid #2e7d32;
+        }
+        
+        .team-member-card {
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-member-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-member-card img {
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .testimonials-section {
+            background-color: #c8e6c9;
+            padding: 50px 0;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2e7d32;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            z-index: 99;
+        }
+        
+        .scroll-top:hover {
+            background-color: #1b5e20;
+            color: white;
+        }
+        
+        .section-title {
+            color: #2e7d32;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #2e7d32;
+        }
+        
+        .value-icon {
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
-<body style="background-color: aquamarine;">
-
-  <header>
-    <nav>
-        <ul style="font-size: 25px;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">products</a></li>
-            <li><a href="disease.html">Diseases & Conditions</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Root & Vine</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disease.html">Diseases & Conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
+
+    <!-- Main Content -->
     <main>
-        <section class="about-intro">
-            <h1>About Us</h1>
-            <p>Welcome to Root & Vine Lifestyle Centre, where we believe in harnessing the power of natural herbs to promote healthy living.</p>
+        <!-- About Intro Section -->
+        <section class="about-intro text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-4">About Us</h1>
+                <p class="lead">Welcome to Root & Vine Lifestyle Centre, where we believe in harnessing the power of natural herbs to promote healthy living.</p>
+            </div>
         </section>
-        <section class="mission-vision-values">
-            <h2>Our Mission, Vision, and Values</h2>
-            <p><strong>Mission:</strong><br> To provide high-quality,<br> natural healthcare solutions that empower individuals <br> to take control of their health  and wellbeing.</p>
-            <p><i class="fa-solid fa-eye-low-vision"></i><br><strong>Vision:</strong><br> To be a leading provider of natural <br> healthcare solutions, recognized for our commitment <br> to excellence, innovation, and patient care.</p>
-            <p><i class="fa-solid fa-heart"></i><br><strong>Values:</strong><br> We value integrity, compassion, and respect for <br> all individuals. We believe in the power of nature and the <br> importance of living a healthy, balanced lifestyle.</p>
+
+        <!-- Mission, Vision, Values Section -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="mission-vision-values text-center">
+                        <h2 class="section-title">Our Mission, Vision, and Values</h2>
+                        
+                        <div class="row mt-5">
+                            <div class="col-md-4 mb-4">
+                                <div class="value-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h3>Mission</h3>
+                                <p>To provide high-quality, natural healthcare solutions that empower individuals to take control of their health and wellbeing.</p>
+                            </div>
+                            
+                            <div class="col-md-4 mb-4">
+                                <div class="value-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3>Vision</h3>
+                                <p>To be a leading provider of natural healthcare solutions, recognized for our commitment to excellence, innovation, and patient care.</p>
+                            </div>
+                            
+                            <div class="col-md-4 mb-4">
+                                <div class="value-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>Values</h3>
+                                <p>We value integrity, compassion, and respect for all individuals. We believe in the power of nature and the importance of living a healthy, balanced lifestyle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="meet-the-team">
-            <h2>Meet Our Team</h2>
-            <ul>
-                <li >
-                    <img src="BABRA.png" alt="Dr. BABRA" style="width: 550px; height: 600px;">
-                    <h3>Dr. NDIZIHIWE BABRA</h3>
-                    <p><b>Medical Director</b> <br> Dr. BABRA is a qualified doctor with <br> over 10 years of experience in natural healthcare. <br> She is passionate about helping patients <br> achieve optimal health and wellbeing.</p>
-                </li>
-                <li>
-                    <img src="./KENNETH.jpg" alt="Dr. KENNETH" style="width: 550px; height: 600px;">
-                    <h3>NURSE. BWAMBALE KENNETH</h3>
-                    <p> PYSIOTHERAPY EXPERT <br> Nurse Kenneth is a qualified PYSIOTHERAPY EXPERT with <br> a specialization in herbal medicine. <br> he is dedicated to providing personalized <br> care to his patients.</p>
-                </li>
-                <!-- Add more team members -->
-            </ul>
+
+        <!-- Meet the Team Section -->
+        <section class="container my-5">
+            <h2 class="text-center section-title">Meet Our Team</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card team-member-card h-100">
+                        <img src="BABRA.png" class="card-img-top" alt="Dr. BABRA">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Dr. NDIZIHIWE BABRA</h3>
+                            <h5 class="text-success">Medical Director</h5>
+                            <p class="card-text mt-3">Dr. BABRA is a qualified doctor with over 10 years of experience in natural healthcare. She is passionate about helping patients achieve optimal health and wellbeing.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card team-member-card h-100">
+                        <img src="./KENNETH.jpg" class="card-img-top" alt="Nurse Kenneth">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">NURSE. BWAMBALE KENNETH</h3>
+                            <h5 class="text-success">PYSIOTHERAPY EXPERT</h5>
+                            <p class="card-text mt-3">Nurse Kenneth is a qualified PYSIOTHERAPY EXPERT with a specialization in herbal medicine. He is dedicated to providing personalized care to his patients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="testimonials" id="testimonials">
-            <h2>What Our Patients Say</h2>
-            <ul>
-                <li>
-                    <p>"I was struggling with chronic pain for years, <br> but after trying Root & Vine's natural remedies, <br> I'm finally pain-free!" - Rachel, age 35</p>
-                </li>
-                <li>
-                    <p>"The team at Root & Vine are so knowledgeable and caring. <br> They helped me overcome my health issues <br> and I feel like a new person!" - John, age 42</p>
-                </li>
-                <!-- Add more testimonials -->
-            </ul>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="text-center section-title">What Our Patients Say</h2>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="testimonial-card text-center">
+                                        <p class="fst-italic">"I was struggling with chronic pain for years, but after trying Root & Vine's natural remedies, I'm finally pain-free!"</p>
+                                        <h5 class="mt-3">- Rachel, age 35</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="testimonial-card text-center">
+                                        <p class="fst-italic">"The team at Root & Vine are so knowledgeable and caring. They helped me overcome my health issues and I feel like a new person!"</p>
+                                        <h5 class="mt-3">- John, age 42</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <a href="" class="scroll-top" id="btnscroll" style="display: flexbox; left: 0; background-color: blue; color: #0afa2a; font-size: 30px;">Back to top</a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
     <script>
-        // About Us script.js code
-
-// Get the team members element
-const teamMembers = document.getElementById('team-members');
-
-// Initialize the team members carousel
-const teamMembersOptions = {
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  arrows: true,
-  dots: false,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1
-      }
-    }
-  ]
-};
-$(teamMembers).slick(teamMembersOptions);
-
-// Get the testimonials element
-const testimonials = document.getElementById('testimonials');
-
-// Initialize the testimonials carousel
-const testimonialsOptions = {
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  arrows: false,
-  dots: true
-};
-$(testimonials).slick(testimonialsOptions);
-
-// Add event listener to the "Read More" buttons
-const readMoreButtons = document.querySelectorAll('.read-more-button');
-readMoreButtons.forEach(button => {
-  button.addEventListener('click', handleReadMore);
-});
-
-// Function to handle "Read More" button click
-function handleReadMore(event) {
-  const button = event.target;
-  const teamMemberBio = button.nextElementSibling;
-
-  // Toggle the team member bio
-  teamMemberBio.classList.toggle('active');
-  button.textContent = teamMemberBio.classList.contains('active') ? 'Read Less' : 'Read More';
-}
-
-// Get the newsletter signup form element
-const newsletterForm = document.getElementById('newsletter-form');
-
-// Add event listener to the newsletter signup form
-newsletterForm.addEventListener('submit', handleNewsletterSubmit);
-
-// Function to handle newsletter submission
-function handleNewsletterSubmit(event) {
-  event.preventDefault();
-
-  const emailInput = document.getElementById('newsletter-email');
-  const email = emailInput.value;
-
-  // Validate the email address
-  if (!email || !validateEmail(email)) {
-    alert('Please enter a valid email address');
-    return;
-  }
-
-  // Send the email address to the server
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'newsletter.php', true);
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.send(`email=${email}`);
-
-  // Handle the server response
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      alert('Thank you for subscribing to our newsletter!');
-      newsletterForm.reset(); // Reset the form
-    } else {
-      alert('Error subscribing to newsletter. Please try again later.');
-    }
-  };
-}
-
-// Function to validate an email address
-function validateEmail(email) {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return emailRegex.test(email);
-}
+        // Back to top button
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 100){
+                    $('.scroll-top').fadeIn();
+                } else {
+                    $('.scroll-top').fadeOut();
+                }
+            });
+            
+            $('.scroll-top').click(function(){
+                $('html, body').animate({scrollTop : 0}, 800);
+                return false;
+            });
+            
+            // Initialize carousel
+            $('.team-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
     </script>
 </body>
 </html>
